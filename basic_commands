@@ -1,0 +1,32 @@
+1. docker images
+
+This will list the image id
+
+2. Basic command to run container 
+
+#docker run -it --name centos7 3afd47092a0e
+
+3afd47092a0e ->this is the image id
+
+Note: To exit from container without terminating use  (ctrl+p  or ctrl+q)
+
+3. To login again in container
+
+#docker exec -it centos7 bash
+
+4.To see default docker network 
+
+#docker network ls
+
+To see details of particular network type and to know the ip's of container
+
+#docker network inspect bridge
+
+Note: Linux command to check bridges
+#brctl show
+
+5. To kill docker processes
+
+#docker rm -v $(docker ps --filter status=created -q)
+
+6. 
