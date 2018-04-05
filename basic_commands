@@ -29,4 +29,8 @@ Note: Linux command to check bridges
 
 #docker rm -v $(docker ps --filter status=created -q)
 
+docker stop $(docker ps -a -q)
+
+docker rm $(docker ps -a -q)
+
 6. 
