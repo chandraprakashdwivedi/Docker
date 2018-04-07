@@ -8,11 +8,12 @@ This will list the image id
 
 3afd47092a0e ->this is the image id
 
-Note: To exit from container without terminating use  (ctrl+p  or ctrl+q)
+Note: To exit from container without terminating use  (ctrl+p+q  )
 
 3. To login again in container
 
-#docker exec -it centos7 bash
+#docker attach (container_id)        Note:first 3 character are enough
+
 
 4.To see default docker network 
 
@@ -33,4 +34,40 @@ docker stop $(docker ps -a -q)
 
 docker rm $(docker ps -a -q)
 
-6. 
+6. To execute commands directly inside docker container 
+
+#docker exec -it centos7 bash
+
+
+--------------------------------------------
+Continous deployment part :
+
+For that purpose we need to create a dockerfile to build OS image
+and to automate all build also to provide particular networking and volume so that we dont need to pass
+extra argument while docker run to that docker image 
+we need to create yaml file using docker compose 
+
+7. First creating Dockerfile (name of file should be same as Dockerfile)
+    sample docker file:
+    
+    FROM centos
+    RUN yum -y install httpd; yum clean all; systemctl enable httpd.service
+    EXPOSE 80
+    CMD ["/usr/bin/bash"]
+    
+ 8. Sample yaml file to automate build 
+    
+version : '2'
+services :
+    apache:
+        build: .
+        ports:
+            - "5000:80"
+        volumes :
+            - .:/var/www/html
+           
+    
+    To run this yaml use
+    
+    #docker-compose up
+             
