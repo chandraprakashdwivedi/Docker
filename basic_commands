@@ -38,6 +38,18 @@ docker rm $(docker ps -a -q)
 
 #docker exec -it centos7 bash
 
+--------------------------------------------
+
+Building Docker image 
+
+For this we create a Dockerfile and run these commands 
+
+#docker build -t image_name  .
+
+#docker run -it --name container_name  image_id
+
+
+To build multiple container in single time we use docker-compose as it is a part of continous deployment.
 
 --------------------------------------------
 Continous deployment part :
@@ -67,7 +79,16 @@ services :
             - .:/var/www/html
            
     
+    
     To run this yaml use
+     
     
     #docker-compose up
+    
+    To run multiple container at single time
+    
+    #
+    
+    
+    
              
