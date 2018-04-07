@@ -1,8 +1,16 @@
 version : '2'
+
 services :
-    apache:
+    apache1:
         build: .
         ports:
-            - "5000:80"
-        volumes :
-            - .:/var/www/html
+          - "5000:80"
+        volumes:
+          - .:/var/www/html
+
+    mysql:
+        image: mysql
+        environment:
+           MYSQL_ROOT_PASSWORD: password
+
+
