@@ -28,3 +28,4 @@ haproxy:
   expose:
    - "80"
    - "70"
+   
