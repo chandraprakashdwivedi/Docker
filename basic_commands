@@ -81,13 +81,18 @@ services :
     
     
     To run this yaml use
-     
+         
+    #docker-compose up -d           where -d is used to run container in background
     
-    #docker-compose up
     
     To run multiple container at single time
     
-    #
+    #docker-compose up --scale [SERVICE=NUM...]
+    
+    For eg.
+    
+    docker-compose up --scale web=2 worker=3
+
     
     
     
