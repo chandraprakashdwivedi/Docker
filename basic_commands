@@ -45,11 +45,11 @@ docker rm $(docker ps -a -q)
 
 8. Running Docker with specific cpu,cpu-core, ram ,network,volume,port,memory
 
-#docker run --net mynet --ip 192.168.1.5 -p 5000:80 -v ".":/var/www/html  -m 500m --cpuset-cpus=0 -c 500 -it --name apache  centos /bin/bash
+#docker run --net mynet --ip 192.168.1.5 -p 5000:80 -v /mnt:/var/www/html  -m 500m --cpuset-cpus=0 -c 500 -it --name apache  centos /bin/bash
 
 
 where -c = cpu-shares =the default cpu share is 1024 i.e considered to be 1 Ghz 
-cpuset-cpu=To assign specific core to container
+cpuset-cpu=To assign specific core to container where 0 is first core
 -m = memory
 
 For more updates visit:
