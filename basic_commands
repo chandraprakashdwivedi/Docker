@@ -129,7 +129,7 @@ services :
     
     Here replica run the no. of container of the provided image
     
-    After that to check container user
+    After that to check the cluster containers use
     
     #docker service ps apache
              
