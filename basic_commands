@@ -122,4 +122,14 @@ services :
      
      #docker swarm init
     
+    Now using swarm we create our container now using "service" module and it take care of all the features we want to add in container 
+    For eg.
+    
+    #docker service create --replicas=2 --mount type=volume,source=important_data,target=/var/www/html,volume-driver=local --name apache  centos 
+    
+    Here replica run the no. of container of the provided image
+    
+    After that to check container user
+    
+    #docker service ps apache
              
