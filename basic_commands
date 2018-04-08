@@ -122,6 +122,14 @@ services :
      
      #docker swarm init
     
+    To check cluster nodes of swarn the default you see a leader machine 
+    
+    #docker node ls
+    
+    To create worker node
+    
+    #
+    
     Now using swarm we create our container now using "service" module and it take care of all the features we want to add in container 
     For eg.
     
@@ -132,4 +140,6 @@ services :
     After that to check the cluster containers use
     
     #docker service ps apache
+    
+    
              
