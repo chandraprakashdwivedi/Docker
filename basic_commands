@@ -77,7 +77,7 @@ and to automate all build also to provide particular networking and volume so th
 extra argument while docker run to that docker image 
 we need to create yaml file using docker compose 
 
-7. First creating Dockerfile (name of file should be same as Dockerfile)
+9. First creating Dockerfile (name of file should be same as Dockerfile)
     sample docker file:
     
     FROM centos
@@ -85,7 +85,7 @@ we need to create yaml file using docker compose
     EXPOSE 80
     CMD ["/usr/bin/bash"]
     
- 8. Sample yaml file to automate build 
+ 10. Sample yaml file to automate build 
     
 version : '2'
 services :
@@ -112,6 +112,14 @@ services :
     docker-compose up --scale web=2 worker=3
 
     
+    ---------------------------------------------------
     
+    Docker cluster
+    
+    11. Docker swarm: 
+     
+     It is the default cluster software available in docker engine first you need to initiliaze it 
+     
+     #docker swarm init
     
              
