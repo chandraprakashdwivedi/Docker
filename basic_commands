@@ -120,15 +120,21 @@ services :
      
      It is the default cluster software available in docker engine first you need to initiliaze it 
      
-     #docker swarm init
+     #docker swarm init --advertise-addr 192.168.1.10
     
     To check cluster nodes of swarn the default you see a leader machine 
     
     #docker node ls
     
-    To create worker node
+      
+    To check node info user
     
-    #
+    #docker node inspect hostname --pretty
+      
+    To create worker node (Note token is different for diferent node)
+    
+    # docker swarm join --token SWMTKN-1-086f11dfzstcic405cyysx5h3i607r5e2bn4671xfj1f7b3g7k-3ttivfqczyoc4x37jn0oi7r4e 192.168.1.10:2377
+    
     
     Now using swarm we create our container now using "service" module and it take care of all the features we want to add in container 
     For eg.
