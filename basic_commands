@@ -131,10 +131,27 @@ services :
     
     #docker node inspect hostname --pretty
       
-    To create worker node (Note token is different for diferent node)
+    To create a new manager node we need token 
     
-    # docker swarm join --token SWMTKN-1-086f11dfzstcic405cyysx5h3i607r5e2bn4671xfj1f7b3g7k-3ttivfqczyoc4x37jn0oi7r4e 192.168.1.10:2377
+    #docker swarm join-token manager
     
+    similarly to join new worker from manager node we need token to add worker to that manager node
+    
+    #docker swarm join-token worker    
+    
+    To leave Docker cluster service run this command on that docker node
+    
+    #docker swarm leave
+    After that you need to remove it from cluster service from manager node
+    #docker node rm  <node-name>
+    
+    Some of the DOcker-Swarm Management commands
+    
+    #docker node update --availability drain <hostname>
+    #docker node update --availability active <hostname>
+    #docker node promote <hostname>
+    #docker node demote <hostname>
+    #docker node update  --label-add Env=Dev <hostname>
     
     Now using swarm we create our container now using "service" module and it take care of all the features we want to add in container 
     For eg.
