@@ -164,5 +164,19 @@ services :
     
     #docker service ps apache
     
+    To scale docker container (it should be in replicated mode)
+    
+    #docker service ls
+    
+    #docker service scale <service_name>=5 
+    
+    To scale down
+    
+    #docker service scale <service_name>=1 
+    
+    To remove
+    
+    #docker service rm <service_name>
+    
     
              
