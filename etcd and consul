@@ -1,0 +1,25 @@
+Etcd is a key/value manager tool which help in monitoring docker cluster nodes.
+
+Installing etcd
+
+#docker run -d --name etcd -p 2379:2379 -m 500m --net mynet elcolio/etcd
+
+After that access this url 
+
+http://localhost:2379/v2/keys
+
+
+Now to enter inside container user
+
+#docker exec -it etcd /bin/sh
+
+
+
+
+
+-------------------------------------------------
+
+
+Consul
+
+
