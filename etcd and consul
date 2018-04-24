@@ -1,3 +1,6 @@
+Running an etcd-Backed Docker Swarm Cluster
+https://blog.scottlowe.org/2015/04/19/running-etcd-backed-docker-swarm-cluster/
+
 Etcd is a key/value manager tool which help in monitoring docker cluster nodes.
 
 Installing etcd
@@ -8,10 +11,23 @@ After that access this url
 
 http://localhost:2379/v2/keys
 
+http://localhost:2379/v2/keys/swarm/     #For Swarm
 
-Now to enter inside container user
+To add a new node in etcd cluster
+
+-First add a new docker machine then register that machine to etcd.
 
 #docker exec -it etcd /bin/sh
+
+#etcdctl member add my_new_node_name http://ip_address_here:2380
+
+#etcdctl member add centos7 http://172.17.0.2:2380
+
+
+For more reference visit this link:
+
+Adding and removing nodes to an existing CoreOS etcd2 cluster using etcdctl
+https://www.jorgeacetozi.com/single-post/adding-and-removing-nodes-to-an-existing-coreos-etcd2-cluster-using-etcdctl
 
 
 
@@ -21,5 +37,7 @@ Now to enter inside container user
 
 
 Consul
+
+https://blog.scottlowe.org/2015/03/06/running-own-docker-swarm-cluster/
 
 
