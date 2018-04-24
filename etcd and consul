@@ -1,5 +1,10 @@
 Running an etcd-Backed Docker Swarm Cluster
+
+References:
 https://blog.scottlowe.org/2015/04/19/running-etcd-backed-docker-swarm-cluster/
+
+https://github.com/docker/swarm/issues/1710
+
 
 Etcd is a key/value manager tool which help in monitoring docker cluster nodes.
 
