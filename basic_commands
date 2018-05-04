@@ -1,6 +1,18 @@
-1. docker images
+First listing and downloading images
 
-This will list the image id
+1. docker images list                  #This will list the image id
+
+To search for images
+#docker image search image[image:tag]
+For eg.
+#docker image search centos:centos7
+
+Images are downloaded in location 
+
+/var/lib/docker/devicemapper/devicemapper/data stores the images
+
+directory vary depending on the driver Docker is using for storage. 
+You can manually set the storage driver with the -s or --storage-driver= option to the Docker daemon. 
 
 2. Basic command to run container 
 
@@ -30,9 +42,9 @@ Note: Linux command to check bridges
 
 #docker rm -v $(docker ps --filter status=created -q)
 
-docker stop $(docker ps -a -q)
+#docker stop $(docker ps -a -q)
 
-docker rm $(docker ps -a -q)
+#docker rm $(docker ps -a -q)
 
 6. To execute commands directly inside docker container 
 
@@ -40,7 +52,7 @@ docker rm $(docker ps -a -q)
 
 7. Docker Network:
 
-#docker nework create --subnet=192.168.1.0/16 --gateway=192.168.1.1  mynet
+#docker network create --subnet=192.168.1.0/16 --gateway=192.168.1.1  mynet
 
 
 8. Running Docker with specific cpu,cpu-core, ram ,network,volume,port,memory
@@ -51,6 +63,11 @@ docker rm $(docker ps -a -q)
 where -c = cpu-shares =the default cpu share is 1024 i.e considered to be 1 Ghz 
 cpuset-cpu=To assign specific core to container where 0 is first core
 -m = memory
+
+To check how much RAM docker container is using
+
+#docker stats -a centos7 --no-stream
+
 
 For more updates visit:
 https://goldmann.pl/blog/2014/09/11/resource-management-in-docker/#_cpu
