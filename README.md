@@ -114,8 +114,7 @@ services :
             - .:/var/www/html
            
     
-    
-    To run this yaml use
+     To run this yaml use
          
     #docker-compose up -d           where -d is used to run container in background
     
@@ -137,7 +136,7 @@ services :
      
      It is the default cluster software available in docker engine first you need to initiliaze it 
      
-     #docker swarm init --advertise-addr 192.168.1.10
+     #docker swarm init --advertise-addr 192.168.1.10 --listen-addr 127.0.0.1 
     
     To check cluster nodes of swarn the default you see a leader machine 
     
