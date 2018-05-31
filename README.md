@@ -136,7 +136,7 @@ services :
      
      It is the default cluster software available in docker engine first you need to initiliaze it 
      
-     #docker swarm init --advertise-addr 192.168.1.10 --listen-addr 127.0.0.1 
+     #docker swarm init --advertise-addr 192.168.1.10 --listen-addr 0.0.0.0
     
     To check cluster nodes of swarn the default you see a leader machine 
     
