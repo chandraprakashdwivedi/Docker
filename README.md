@@ -174,6 +174,15 @@ services :
     
     #docker service create --replicas=2 --mount type=volume,source=important_data,target=/var/www/html,volume-driver=local --name apache  centos 
     
+    #docker service create \
+	--mode=global \
+	--name jenkins-swarm-agent \
+	-e LABELS=docker-test \
+	--mount "type=bind,source=/var/run/docker.sock,target=/var/run/docker.sock" \
+	--mount "type=bind,source=/tmp/,target=/tmp/" \
+	--secret source=jenkins-v1,target=jenkins \
+	vipconsult/jenkins-swarm-agent
+    
     Here replica run the no. of container of the provided image
     
     After that to check the cluster containers use
