@@ -1,7 +1,7 @@
 env.docker_username = 'chandraprakashdwivedi'
 env.website = 'my-web1'  //
 
-node("docker-test") {
+node("docker-prod") {
 	checkout scm
 	
 	stage("Integration Test") {
