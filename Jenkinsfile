@@ -1,5 +1,5 @@
 env.docker_username = 'chandraprakashdwivedi'
-env.website = 'my-web1'  //
+env.website = 'my-web1'  
 
 node("docker-prod") {
 	checkout scm
