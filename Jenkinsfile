@@ -2,7 +2,7 @@ env.docker_username = 'chandraprakashdwivedi'
 env.website = 'my-web1'  
 
 node("docker-prod") {
-	checkout scm
+	checkout scm //This is used to clone the repository in workspace
 	
 	stage("Integration Test") {
 		try {
