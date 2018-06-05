@@ -1,3 +1,5 @@
+#!groovy
+
 env.docker_username = 'chandraprakashdwivedi'
 env.website = 'my-web1'  
 
