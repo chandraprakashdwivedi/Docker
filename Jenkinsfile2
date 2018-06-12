@@ -10,8 +10,8 @@ node("docker-prod") {
 			}
 		catch(e) {
 			error "Integration Test failed"
-		}finally {
-			sh "docker rm -f $website || true
+		}
+		finally {
 			sh "docker ps -aq | xargs docker rm || true"
 			sh "docker images -aq -f dangling=true || true"
 		}
