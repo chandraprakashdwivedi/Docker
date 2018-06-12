@@ -7,9 +7,7 @@ node("docker-prod") {
 	stage("Integration Test") {
 		try {
 			sh "docker build -t $website ."
-			sh "docker rm -f $website || true"
-			docker service create --replica 2 --network mynet --name ${website} ${docker_username}/${website}:${BUILD_NUMBER}
-	       	}
+			}
 		catch(e) {
 			error "Integration Test failed"
 		}finally {
