@@ -7,6 +7,7 @@ node("docker-prod") {
 	stage("Integration Test") {
 		try {
 			sh "docker build -t $website ."
+			sh "docker rm -f $website || true"
 			}
 		catch(e) {
 			error "Integration Test failed"
