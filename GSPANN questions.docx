@@ -4,4 +4,21 @@ Q2. How to get the port number the application using?
 
 Q3. How to get the 1GB file under /opt directory ?
 
+Q4. what is the usage of /etc/rc.local file?
+
+Q5.How to copy files into remote server using key ?
+
+Q6.How to get the command status whether it is success or not?
+
+Q7.How to verify how many cores does system have?
+
+Q8.I have some directory which was full for eg /opt/jboss but we have enough space in system so how could we incerease that filesystem?
+
+Q9.I have different directories in different location for eg "/www/logs/env.props /opt/jboss/rnv.props" you have to compare the differences and take the output in the file ?
+
+Q10. How to create multiple directories in ansible?
+
+Q11.How CI/CD is working?
+
+Q12.
 
