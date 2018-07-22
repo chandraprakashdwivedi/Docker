@@ -20,5 +20,66 @@ Q10. How to create multiple directories in ansible?
 
 Q11.How CI/CD is working?
 
-Q12.
+Q12.What are the commands to push the branch in remote GIT repository?
+
+Q13.How will you test your ansible playbooks?
+
+Q14.After a jenkins job completed it is generating some files in the workspace and we want those file in the mail 
+attachemnt how will we do it?What plugin used for it?
+
+Q15.How to clone multiple repository in a single job?
+
+Q16.In jenkins i want to clear the workspace before any new build what is the option you will select?
+
+Q17.How to delete older builds i want to keep at a time only 3 build remaining build should be deleted?
+
+Q18.How to delete all the non running containers in one shot?
+
+Q19.We need to create a docker file and the image is in our repository we need to open some ports?
+After that you need to run that cntainer?
+
+Q20.How will you enter inside a running docker container.?
+
+Q21.Suppose i have war file in my local machine how will i deploy it the container?
+
+Q22. How to verify my conainer IP?
+
+Q23.I want a docker container should run Jboss application automatically while its started 
+what are the changes you perform in Dockerfile?
+
+Q24.How will you set environment variable in Dockerfile?
+
+Q25.How could you run the jenkins slave in docker?
+
+Q26.How to route a web request to application server?
+
+Q27.How will you redirect the traffic to same server based on the URL for Eg if the url is requesting for image you need to
+redirect traffic to image directory similary you have redirect the request accordingly to different directories.?
+
+Q28.How to run multiple Jboss application in different port?
+
+Q29.What is the mod_cluster usage in jboss?
+
+Q30.What are the attribute precedence in chef?How many attribute precedence we have in chef?
+
+Q31.How to create cookbook in local?
+
+Q32.In chef i want to see the particular node configuration details from my local machine how to see that?
+
+Q33.what is the use of automatic attribute in chef?
+
+Q34.How to create multiple directories in chef?
+
+Q35.Create a python script i have some student dictionery(name,age,school) i have to print only keys?Also how to verify 
+how many keys in my dictionery?
+
+Q36.How to create instances using AWS command line?
+
+Q37.What is the address range you will provide in VPC if you need 4 thousand instances in any availability zone?
+
+Q38.Suppose if we want to replicate our S3 bucket in different region how to do it?
+
+Q39.What is the bucket policy?
+
+
 
