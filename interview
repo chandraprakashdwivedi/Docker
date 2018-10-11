@@ -1,0 +1,44 @@
+Q. How to check origin in git?
+
+Q.What are the kind of log apache generates and how to customize the log file ?
+A. generated two types of logs
+1) Access log
+2) Error log
+Location for log: /var/log/httpd/access_log /var/log/httpd/error_log
+For custom log use custom directive in virtual host
+CustomLog ${APACHE_LOG_DIR}/access.log or error.log
+
+Q. How can Apache act a Proxy Server?
+A. You can use a mod_proxy module 
+
+Q.you are on web server you need to check from which particular ip you are getting the traffic?using iptables?
+A. #iptables  -L -n
+
+Q How to change mysql user password shilw login in mysql ?
+SET PASSWORD FOR 'root'@'localhost' = PASSWORD('newpassword');
+
+Q) taking backup of mysql database structure only
+	mysqldump –u [uname] –p [password] -no-data [dbname > [dump_file.sql]
+  
+ Q. How will you configure master slave configuration in mysql if onw node is down?
+ 
+ Q. What port does NRPE used
+ 5666
+ 
+ Q.How to generate the sms alert on mobile?
+A. For that purpose there is a sms alert file inside object directory in nagios whose location is
+/usr/local/nagios/etc/objects
+
+QHow will you add new host in nagios?
+
+#cp /usr/local/nagios/etc/objects/localhost.cfg  /usr/local/nagios/etc/objects/client.cfg
+Now In client.cfg file add your host machine name and ip
+        host_name               client
+        alias                   client
+        address                 192.168.4.52
+        
+#vim /usr/local/nagios/etc/nagios.cfg
+
+# Definitions for monitoring the local (Linux) host
+cfg_file=/usr/local/nagios/etc/objects/localhost.cfg
+cfg_file=/usr/local/nagios/etc/objects/client.cfg
